@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Patua+One&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    margin: 0px;
+    transition: 0.2s ease-out;
+}
+
+@font-face {
+    font-family: 'NOS';
+    src: url('fonts/NOS.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-image: url(imgs/BG.jpg);
+    background-size: cover;
+    user-select: none;
+    text-align: center;
+    justify-content: center;
+}
+
+.txtlogin {
+    font-family: 'Red Hat Display';
+    font-weight: 700;
+}
+
+.center {
+    position: relative;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    display: inline-flex;
+}
+
+img {
+    border-radius: 10px;
+    max-width: 100px;
+    margin-bottom: 20px;
+}
+
+.acess {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(to bottom, #1a1a1a, #333333);
+    padding: 50px;
+    border-radius: 10px;
+    color: #7F08AF;
+    font-family: "NOS", sans-serif;
+    text-align: center;
+    justify-content: center;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+input {
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.849);
+    background-color: #00000000;
+    color: white;
+    width: 300px;
+    font-size: 30px;
+    text-align: center;
+    font-family: "Red Hat Display", serif;
+    font-weight: bold
+}
+
+input:focus {
+    outline: none;
+    width: 400px;
+    text-align: left;
+}
+
+.btnlogar {
+    border: 1px solid #7F08AF;
+    position: relative;
+    height: auto;
+    max-width: 450px;
+    padding: 10px;
+    border-radius: 10px;
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: 40px;
+    font-family: "NOS", sans-serif;
+    padding-top: 15px;
+    cursor: pointer;
+}
+
+.btnlogar:hover {
+    background-color: #7F08AF;
+    color: white;
+}

@@ -320,7 +320,7 @@ h1 {
 .novidade {
     font-family: "NOS", Sans-serif;
     font-size: 50px;
-    background: linear-gradient(to right, #7F08AF, #d21b1b);
+    background: #7F08AF;
     /* Gradiente de vermelho para roxo */
     -webkit-background-clip: text;
     /* Suporte para WebKit (Chrome, Safari) */
@@ -388,10 +388,11 @@ h1 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-image: url(imgs/testebackf.jpeg);
+    background: linear-gradient(to bottom, #1a1a1a, #333333);
     background-size: cover;
     padding: 40px;
     border-radius: 10px;
     color: #7F08AF;
     font-family: "NOS", Sans-serif;
+    z-index: 1;
 }

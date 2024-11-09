@@ -27,7 +27,7 @@ h1 {
     font-style: normal;
     display: flex;
     color: #ce939d;
-    background-image: url(imgs/BG.jpg);
+    background-image: url(imgs/backsensi.png);
     background-position: bottom;
     background-size: 100%;
     padding: 20px;
@@ -272,7 +272,7 @@ h1 {
     --padding-vertical-texto: 0px;
     --tamanho-bordas-esq-dir: 1px;
     --cor-bordas-esq-dir: #ab0b2;
-    --background-texto: linear-gradient(90deg, #6d0214 0%, #ab0b26 100%);
+    --background-texto: #7F08AF;
     --tamanho-circulos: 8px;
     --fundo-circulos: #ab0b26;
 }
@@ -322,4 +322,11 @@ h1 {
     background-color: #8008af44;
     margin-top: 100px;
     color: #7F08AF;
+}
+
+.imgavs {
+    filter: brightness(0) saturate(100%) invert(23%) sepia(98%) saturate(503%) hue-rotate(258deg) brightness(90%);
+    max-width: 50px;
+    border-radius: 10px;
+    margin-right: 50px;
 }

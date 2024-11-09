@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style4.css">
+    <title>Alterar Senha</title>
+</head>
+
+<body>
+    <div class="acess">
+        <div class="center">
+            <h1>Alterar Senha</h1>
+        </div>
+        <div id="alterarSenhaForm">
+            <label for="login">Usuário:</label>
+            <input type="text" id="loginAlterar" placeholder="Digite o nome de usuário">
+            <br><br>
+            <label for="senhaAntiga">Senha Atual:</label>
+            <input type="password" id="senhaAntiga" placeholder="Digite a senha atual">
+            <br><br>
+            <label for="novaSenha">Nova Senha:</label>
+            <input type="password" id="novaSenha" placeholder="Digite a nova senha">
+            <br><br>
+            <button onclick="alterarSenha()">Alterar Senha</button>
+        </div>
+    </div>
+
+    <script>
+        const token = "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"; // Insira seu token de acesso pessoal do GitHub
+const repoOwner = "samukzxp"; // Seu nome de usuário no GitHub
+const repoName = "bdvz"; // Nome do repositório onde deseja salvar os dados
+const pathOwner = "dados/owner.json"; // Caminho do arquivo owner.json
+const path = "dados/usuarios.json"; // Caminho do arquivo JSON no repositório// Função para alterar a senha
+async function alterarSenha() {
+    const login = document.getElementById('loginAlterar').value.trim();
+    const senhaAntiga = document.getElementById('senhaAntiga').value.trim();
+    const novaSenha = document.getElementById('novaSenha').value.trim();
+
+    if (!login || !senhaAntiga || !novaSenha) {
+        alert("Por favor, preencha todos os campos.");
+        return;
+    }
+
+    const usuarios = await fetchUsuarios(); // Carregar usuários do GitHub
+
+    // Encontrar o usuário com o login fornecido
+    const usuario = usuarios.find(u => u.username?.trim() === login);
+
+    if (!usuario) {
+        alert("Usuário não encontrado.");
+        return;
+    }
+
+    if (usuario.password.trim() !== senhaAntiga) {
+        alert("Senha antiga incorreta.");
+        return;
+    }
+
+    // Atualiza a senha com a nova senha
+    usuario.password = novaSenha;
+
+    // Atualiza o arquivo JSON no GitHub com a nova senha
+    const sucesso = await atualizarUsuarios(usuarios);
+
+    if (sucesso) {
+        alert("Senha alterada com sucesso!");
+    } else {
+        alert("Erro ao atualizar a senha.");
+    }
+}
+
+// Função para atualizar os usuários no GitHub
+async function atualizarUsuarios(usuarios) {
+    const usuariosJson = JSON.stringify(usuarios);
+    const usuariosBase64 = btoa(usuariosJson); // Codifica em base64, como esperado pela API do GitHub
+
+    try {
+        const response = await fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/contents/${path}`, {
+            method: 'PUT',
+            headers: {
+                Authorization: `token ${token}`,
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                message: "Alterando senha do usuário",
+                content: usuariosBase64,
+                sha: await obterShaDoArquivo()  // Precisamos do SHA do arquivo para atualizá-lo
+            })
+        });
+
+        if (response.ok) {
+            return true;
+        } else {
+            console.error("Erro ao atualizar arquivo:", await response.json());
+            return false;
+        }
+    } catch (error) {
+        console.error("Erro ao atualizar arquivo:", error);
+        return false;
+    }
+}
+
+// Função para obter o SHA do arquivo
+async function obterShaDoArquivo() {
+    const response = await fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/contents/${path}`, {
+        headers: {
+            Authorization: `token ${token}`
+        }
+    });
+    
+    const data = await response.json();
+    return data.sha;
+}
+
+// Função para buscar os dados dos usuários no GitHub
+async function fetchUsuarios() {
+    try {
+        const response = await fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/contents/${path}`, {
+            headers: {
+                Authorization: `token ${token}`
+            }
+        });
+
+        const data = await response.json();
+        if (data && data.content) {
+            const usuariosJson = atob(data.content);  // Decodifica o conteúdo de Base64
+            return JSON.parse(usuariosJson);  // Retorna o conteúdo como um objeto JavaScript
+        }
+        return [];
+    } catch (error) {
+        console.error("Erro ao buscar usuários:", error);
+        return [];
+    }
+}
+
+
+    </script>
+</body>
+
+</html>
