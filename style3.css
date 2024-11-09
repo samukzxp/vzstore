@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Patua+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Patua+One&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+h1 {
+    font-family: "NOS", Sans-serif;
+}
+
+.logoback {
+    border-radius: 10px;
+    width: 50%;
+    position: relative;
+    margin-top: 10%;
+}
+
+.teste {
+    position: relative;
+    max-width: 660px;
+    height: 96px;
+    font-family: "Patua One", serif;
+    font-style: normal;
+    display: flex;
+    color: #ce939d;
+    background-image: url(imgs/BG.jpg);
+    background-position: bottom;
+    background-size: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    left: 50%;
+    transform: translate(-50%);
+    align-items: center;
+    padding-top: 39px;
+    padding-bottom: 39px;
+}
+
+.testeimg {
+    width: 100px;
+    border-radius: 10px;
+    height: 100px;
+}
+
+.alte {
+    position: absolute;
+    right: 0px;
+    justify-content: left;
+    text-align: left;
+    width: 75%;
+}
+
+.t {
+    width: 100%;
+    position: relative;
+}
+
+
+@media (min-width: 500px) {
+
+    body {
+        background-image: #131111;
+        background-image: url(imgs/BG.jpg);
+        text-align: center;
+        justify-content: center;
+        background-repeat: repeat;
+        background-size: cover;
+        background-position: top left;
+        user-select: none;
+        margin: 0px;
+    }
+
+    h1 {
+        font-size: 50px;
+    }
+
+    p {
+        font-family: "Exo 2", sans-serif;
+        color: rgba(255, 255, 255, 0.726);
+
+    }
+
+    span {
+        font-family: "Exo 2", sans-serif;
+        color: rgba(255, 255, 255, 0.884);
+        font-size: 30px;
+    }
+
+    #background-video {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        /* Faz o vídeo cobrir toda a tela */
+        margin: 0px;
+    }
+
+    .linksofc {
+        font-family: "NOS", Sans-serif;
+        color: #ffffffe1;
+        font-size: 30px;
+    }
+
+    
+
+#sp2 {
+    font-family: "NOS", Sans-serif;
+    color: #fe0032;
+    font-size: 30px;
+    background: var(--background-texto);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+}
+}
+
+@media (max-width: 431px) {
+
+    body {
+        background-image: #131111;
+        background-image: url(imgs/backsensi.png);
+        text-align: center;
+        justify-content: center;
+        background-repeat: repeat;
+        background-size: cover;
+        background-position: top left;
+        user-select: none;
+        margin: 0px;
+    }
+    .logo {
+        width: 80%;
+        position: relative;
+        margin-top: 50px;
+    }
+
+    .teste {
+        width: 88%;
+        height: 60px;
+    }
+
+    .alte {
+        width: 65%;
+    }
+
+    h1 {
+        font-size: 30px;
+        color: #ffffffea;
+    }
+
+    span {
+        font-size: 15px;
+        color: #ffffffea;
+    }
+
+    p {
+        font-size: 12px;
+        color: #ffffffea;
+    }
+
+    .sensih1 {
+        font-size: 40px;
+    }
+
+    #background-video {
+        max-width: 100%;
+        height: 220px;
+        object-fit: cover;
+        /* Faz o vídeo cobrir toda a tela */
+        margin: 0px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    #headtra {
+        font-size: 23px;
+    }
+
+    .linksofc {
+        font-family: "NOS", Sans-serif;
+        color: #ffffffe1;
+        font-size: 18px;
+    }
+    
+    
+
+#sp2 {
+    font-family: "NOS", Sans-serif;
+    color: #fe0032;
+    font-size: 18px;
+    background: var(--background-texto);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+}
+
+    
+}
+
+* {
+    transition: 0.2s;
+}
+
+.teste:hover {
+    cursor: pointer;
+    max-width: 590px;
+    height: 90px;
+}
+
+@font-face {
+    font-family: 'NOS';
+    src: url('fonts/NOS.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.f {
+    font-family: "NOS", Sans-serif;
+    font-style: normal;
+    color: #ffffffe1;
+    text-transform: uppercase;
+    position: relative;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Personaliza a barra de rolagem */
+::-webkit-scrollbar {
+    width: 10px;
+    /* Largura da barra */
+}
+
+/* Cor do fundo da barra de rolagem */
+::-webkit-scrollbar-track {
+    background: #303030;
+    /* Cor do track (fundo) */
+}
+
+/* Cor e estilo do "polegar" da barra de rolagem */
+::-webkit-scrollbar-thumb {
+    background-color: #505050;
+    /* Cor do polegar */
+    border-radius: 5px;
+    /* Arredondamento do polegar */
+    border: 2px solid #303030;
+    /* Borda ao redor do polegar */
+}
+
+/* Cor do polegar ao passar o mouse */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #707070;
+}
+
+
+
+
+
+/* Start custom CSS for heading, class: .elementor-element-c318390 */
+:root {
+    --fundo-texto-destaque: rgba(158, 18, 37, 0.22);
+    --padding-horizontal-texto: 8px;
+    --padding-vertical-texto: 0px;
+    --tamanho-bordas-esq-dir: 1px;
+    --cor-bordas-esq-dir: #ab0b2;
+    --background-texto: linear-gradient(90deg, #6d0214 0%, #ab0b26 100%);
+    --tamanho-circulos: 8px;
+    --fundo-circulos: #ab0b26;
+}
+
+.background-destaque {
+    background: var(--fundo-texto-destaque);
+    padding: var(--padding-vertical-texto) var(--padding-horizontal-texto);
+    position: relative;
+    border-left: var(--tamanho-bordas-esq-dir) solid var(--cor-bordas-esq-dir);
+    border-right: var(--tamanho-bordas-esq-dir) solid var(--cor-bordas-esq-dir);
+    display: inline-block;
+}
+
+.gradient-text-destaque {
+    background: var(--background-texto);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+}
+
+.background-destaque::after,
+.background-destaque::before {
+    content: '';
+    position: absolute;
+    width: var(--tamanho-circulos);
+    height: var(--tamanho-circulos);
+    border-radius: 50%;
+    pointer-events: none;
+    background-color: var(--fundo-circulos);
+}
+
+.background-destaque::after {
+    top: -4px;
+    left: -4px;
+}
+
+.background-destaque::before {
+    right: -4px;
+    bottom: -4px;
+}
+
+.navbar {
+    position: relative;
+    bottom: 0px;
+    background-color: #8008af44;
+    margin-top: 100px;
+    color: #7F08AF;
+}
+
+.managerpanel {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.123);
+    background-size: cover;
+    background-position: center;
+    padding: 40px;
+    border-radius: 10px;
+    width: 600px;
+}
+
+input {
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.849);
+    background-color: #00000000;
+    color: white;
+    margin-top: 20px;
+    width: 300px;
+    font-size: 30px;
+    text-align: center;
+    font-family: "Red Hat Display", serif;
+    font-weight: bold
+}
+
+input:focus {
+    outline: none;
+    width: 400px;
+    text-align: left;
+}
+
+.btnlogar {
+    border: 1px solid #7F08AF;
+    position: relative;
+    height: auto;
+    max-width: 450px;
+    padding: 10px;
+    border-radius: 10px;
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: 60px;
+    font-family: "NOS", sans-serif;
+    padding-top: 15px;
+    cursor: pointer;
+}
+
+.textlogar {
+    font-family: "NOS", sans-serif;
+}
+
+.btnlogar:hover {
+    background-color: #7F08AF;
+}
+
+#panelmanager {
+    display: none;
+}

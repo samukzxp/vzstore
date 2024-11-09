@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style3.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="managerpanel">
+        <h1 style="text-transform: uppercase; color: white;">salve!</h1>
+        <div class="login" id="loginpanel">
+            <span>Login</span>
+            <br>
+            <input type="text" id="login">
+            <br><br>
+            <span>senha</span>
+            <br>
+            <input type="password" id="pass">
+            <br>
+            <div class="btnlogar" onclick="logar(event)">
+                <span class="textlogar" style="margin: 0px;">Entrar</span>
+            </div>
+        </div>
+
+        <div id="panelmanager">
+            <span>Link do grupo:</span>
+            <input type="text" id="meuInput">
+            <div class="btnlogar" onclick="enviarParaGitHub(event)">
+                <span class="textlogar" style="margin: 0px;">Alterar</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="logar.js"></script>
+</body>
+</html>

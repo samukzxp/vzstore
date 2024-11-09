@@ -1,12 +1,15 @@
-
 function sensi() {
-window.location.href = "sensibilidades.html";
+    window.location.href = "sensibilidades.html";
 }
 
 function insta() {
-window.open("https://www.instagram.com/vz_vendas._/", "_blank");
+    window.open("https://www.instagram.com/vz_vendas._/", "_blank");
 }
 
 function grupo() {
-window.location.href = "vzgroup22vz222";
+    window.location.href = "";
+}
+
+function headtracking() {
+    window.location.href = "headtracking.html";
 }
