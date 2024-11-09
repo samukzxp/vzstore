@@ -8,5 +8,5 @@ window.open("https://www.instagram.com/vz_vendas._/", "_blank");
 }
 
 function grupo() {
-window.location.href = "vzgroup22vz";
+window.location.href = "vzgroup22vz222";
 }
