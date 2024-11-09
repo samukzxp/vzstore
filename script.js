@@ -8,7 +8,7 @@ window.open("https://www.instagram.com/vz_vendas._/", "_blank");
 }
 
 function grupo() {
-window.location.href = "https://chat.whatsapp.com/DM0achM0esa7r8ceRhtn0Y";
+window.location.href = "https/instagram.com";
 }
 
 function headtracking() {
