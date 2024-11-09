@@ -98,19 +98,19 @@ h1 {
         font-size: 30px;
     }
 
-    
 
-#sp2 {
-    font-family: "NOS", Sans-serif;
-    color: #fe0032;
-    font-size: 30px;
-    background: var(--background-texto);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    box-decoration-break: clone;
-    -webkit-box-decoration-break: clone;
-}
+
+    #sp2 {
+        font-family: "NOS", Sans-serif;
+        color: #fe0032;
+        font-size: 30px;
+        background: var(--background-texto);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        box-decoration-break: clone;
+        -webkit-box-decoration-break: clone;
+    }
 }
 
 @media (max-width: 431px) {
@@ -126,6 +126,7 @@ h1 {
         user-select: none;
         margin: 0px;
     }
+
     .logo {
         width: 80%;
         position: relative;
@@ -181,22 +182,22 @@ h1 {
         color: #ffffffe1;
         font-size: 18px;
     }
-    
-    
 
-#sp2 {
-    font-family: "NOS", Sans-serif;
-    color: #fe0032;
-    font-size: 18px;
-    background: var(--background-texto);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    box-decoration-break: clone;
-    -webkit-box-decoration-break: clone;
-}
 
-    
+
+    #sp2 {
+        font-family: "NOS", Sans-serif;
+        color: #fe0032;
+        font-size: 18px;
+        background: var(--background-texto);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        box-decoration-break: clone;
+        -webkit-box-decoration-break: clone;
+    }
+
+
 }
 
 * {
@@ -374,4 +375,36 @@ input:focus {
 
 #panelmanager {
     display: none;
+}
+
+@media (max-width: 431px) {
+    .managerpanel {
+        width: 70%;
+    }
+
+    input {
+        width: 200px;
+        margin-top: 0px;
+    }
+
+    input:focus {
+        width: 250px;
+    }
+
+    .logintxt {
+        font-family: "Red Hat Display", serif;
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+
+    .passtxt {
+        font-family: "Red Hat Display", serif;
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+}
+
+body {
+    
+    font-family: "Red Hat Display", serif;
 }

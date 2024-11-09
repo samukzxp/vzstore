@@ -388,7 +388,8 @@ h1 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: linear-gradient(to bottom, #1a1a1a, #333333);
+    background-image: url(imgs/testebackf.jpeg);
+    background-size: cover;
     padding: 40px;
     border-radius: 10px;
     color: #7F08AF;
