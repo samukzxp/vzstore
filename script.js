@@ -8,5 +8,5 @@ function insta() {
 }
 
 function grupo() {
-    window.location.href = "teste";
+    window.location.href = "testee";
 }
