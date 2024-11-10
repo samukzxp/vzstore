@@ -130,6 +130,24 @@ img {
         position: relative;
         left: 50%;
     }
+
+    input {
+        border: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.849);
+        background-color: #00000000;
+        color: white;
+        width: 80%;
+        font-size: 30px;
+        text-align: center;
+        font-family: "Red Hat Display", serif;
+        font-weight: bold
+    }
+    
+    input:focus {
+        outline: none;
+        width: 90%;
+        text-align: left;
+    }
 }
 
 @media (min-width: 500px) {
