@@ -326,7 +326,7 @@ h1 {
 
 .imgavs {
     filter: brightness(0) saturate(100%) invert(23%) sepia(98%) saturate(503%) hue-rotate(258deg) brightness(90%);
-    max-width: 50px;
+    max-width: 80px;
     border-radius: 10px;
-    margin-right: 50px;
+    margin-left: 10px;
 }
