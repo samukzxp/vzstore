@@ -13,7 +13,7 @@
 }
 
 body {
-    background-image: url(imgs/BG.jpg);
+    background-image: url(imgs/backsensi.png);
     background-size: cover;
     user-select: none;
     text-align: center;
@@ -89,7 +89,103 @@ input:focus {
     cursor: pointer;
 }
 
+.btnlogar2 {
+    border: 1px solid #7F08AF;
+    position: relative;
+    height: auto;
+    max-width: 450px;
+    padding: 10px;
+    border-radius: 10px;
+    left: 50%;
+    font-weight: 800;
+    transform: translate(-50%);
+    margin-top: 40px;
+    font-family: 'Red Hat Display';
+    padding-top: 15px;
+    cursor: pointer;
+    color: white;
+}
+
+.btnlogar2:hover {
+    background-color: #7F08AF;
+    color: white;
+}
+
 .btnlogar:hover {
     background-color: #7F08AF;
     color: white;
+}
+
+
+.quit {
+    position: absolute;
+    right: 10px;
+    top: -30px;
+    color: white;
+    margin: none;
+}
+
+.escolhas:hover {
+    max-width: 350px;
+}
+
+.escolhas {
+    cursor: pointer;
+    position: relative;
+    max-width: 300px;
+    padding: 20px;
+    margin-bottom: 20px;
+    top: 10px;
+    left: -1000px;
+    border-radius: 10px;
+    background: linear-gradient(to bottom, #353535, #575757);
+    color: #fff;
+    font-weight: 700;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.nos {
+    font-family: 'NOS', sans-serif;
 }
