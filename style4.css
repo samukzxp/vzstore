@@ -40,40 +40,6 @@ img {
     margin-bottom: 20px;
 }
 
-.acess {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    background: linear-gradient(to bottom, #1a1a1a, #333333);
-    padding: 50px;
-    border-radius: 10px;
-    color: #7F08AF;
-    font-family: "NOS", sans-serif;
-    text-align: center;
-    justify-content: center;
-    padding-left: 100px;
-    padding-right: 100px;
-}
-
-input {
-    border: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.849);
-    background-color: #00000000;
-    color: white;
-    width: 300px;
-    font-size: 30px;
-    text-align: center;
-    font-family: "Red Hat Display", serif;
-    font-weight: bold
-}
-
-input:focus {
-    outline: none;
-    width: 400px;
-    text-align: left;
-}
-
 .btnlogar {
     border: 1px solid #7F08AF;
     position: relative;
@@ -125,22 +91,99 @@ input:focus {
     margin: none;
 }
 
-.escolhas:hover {
-    max-width: 350px;
+
+
+@media (max-width: 500px) {
+    .escolhas {
+        cursor: pointer;
+        position: relative;
+        width: 90%;
+        padding: 20px;
+        margin-bottom: 20px;
+        top: 10px;
+        left: -1000px;
+        border-radius: 10px;
+        background: linear-gradient(to bottom, #353535, #575757);
+        color: #fff;
+        font-weight: 700;
+    }
+
+    .acess {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background: linear-gradient(to bottom, #1a1a1a, #333333);
+        padding: 50px;
+        border-radius: 10px;
+        color: #7F08AF;
+        font-family: "NOS", sans-serif;
+        text-align: center;
+        justify-content: center;
+        padding-left: 100px;
+        padding-right: 100px;
+        width: 180px;
+    }
+
+    #resizeandmobile {
+        font-size: 25px;
+        position: relative;
+        left: 50%;
+    }
 }
 
-.escolhas {
-    cursor: pointer;
-    position: relative;
-    max-width: 300px;
-    padding: 20px;
-    margin-bottom: 20px;
-    top: 10px;
-    left: -1000px;
-    border-radius: 10px;
-    background: linear-gradient(to bottom, #353535, #575757);
-    color: #fff;
-    font-weight: 700;
+@media (min-width: 500px) {
+    .escolhas:hover {
+        max-width: 350px;
+    }
+    
+    .escolhas {
+        cursor: pointer;
+        position: relative;
+        max-width: 300px;
+        padding: 20px;
+        margin-bottom: 20px;
+        top: 10px;
+        left: -1000px;
+        border-radius: 10px;
+        background: linear-gradient(to bottom, #353535, #575757);
+        color: #fff;
+        font-weight: 700;
+    }
+
+    input {
+        border: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.849);
+        background-color: #00000000;
+        color: white;
+        width: 300px;
+        font-size: 30px;
+        text-align: center;
+        font-family: "Red Hat Display", serif;
+        font-weight: bold
+    }
+    
+    input:focus {
+        outline: none;
+        width: 400px;
+        text-align: left;
+    }
+
+    .acess {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background: linear-gradient(to bottom, #1a1a1a, #333333);
+        padding: 50px;
+        border-radius: 10px;
+        color: #7F08AF;
+        font-family: "NOS", sans-serif;
+        text-align: center;
+        justify-content: center;
+        padding-left: 100px;
+        padding-right: 100px;
+    }
 }
 
 
