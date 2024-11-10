@@ -4,7 +4,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style4.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Patua+One&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+        * {
+            margin: 0px;
+            transition: 0.2s ease-out;
+        }
+
+        @font-face {
+            font-family: 'NOS';
+            src: url('fonts/NOS.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            background-image: url(imgs/BG.jpg);
+            background-size: cover;
+            user-select: none;
+            text-align: center;
+            justify-content: center;
+        }
+
+        .txtlogin {
+            font-family: 'Red Hat Display';
+            font-weight: 700;
+        }
+
+        .center {
+            position: relative;
+            width: 100%;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            display: inline-flex;
+        }
+
+        img {
+            border-radius: 10px;
+            max-width: 100px;
+            margin-bottom: 20px;
+        }
+
+        .acess {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background: linear-gradient(to bottom, #1a1a1a, #333333);
+            padding: 50px;
+            border-radius: 10px;
+            color: #7F08AF;
+            font-family: "NOS", sans-serif;
+            text-align: center;
+            justify-content: center;
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+
+        input {
+            border: none;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.849);
+            background-color: #00000000;
+            color: white;
+            width: 300px;
+            font-size: 30px;
+            text-align: center;
+            font-family: "Red Hat Display", serif;
+            font-weight: bold;
+        }
+
+        input:focus {
+            outline: none;
+            width: 400px;
+            text-align: left;
+        }
+
+        .btnlogar {
+            border: 1px solid #7F08AF;
+            position: relative;
+            height: auto;
+            max-width: 450px;
+            padding: 10px;
+            border-radius: 10px;
+            left: 50%;
+            transform: translate(-50%);
+            margin-top: 40px;
+            font-family: "NOS", sans-serif;
+            padding-top: 15px;
+            cursor: pointer;
+        }
+
+        .btnlogar:hover {
+            background-color: #7F08AF;
+            color: white;
+        }
+
+        #acesso {
+            border: none;
+            background-color: #00000000;
+            color: white;
+            font-size: 20px;
+            font-family: "Red Hat Display", serif;
+            font-weight: bold;
+            width: 300px;
+            padding: 10px;
+            margin-top: 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.849);
+            text-align: center;
+            appearance: none;
+            /* Remove o estilo padrão de alguns navegadores */
+            -webkit-appearance: none;
+            /* Para navegadores WebKit como o Safari */
+            -moz-appearance: none;
+            /* Para navegadores Firefox */
+            cursor: pointer;
+        }
+
+        #acesso:focus {
+            outline: none;
+            width: 400px;
+            text-align: left;
+            border-bottom: 2px solid #7F08AF;
+        }
+
+        /* Estilizando o botão de dropdown */
+        #acesso::-ms-expand {
+            display: none;
+            /* Remove a seta no IE */
+        }
+
+        #acesso option {
+            background-color: #333333;
+            color: white;
+            font-size: 20px;
+            font-family: "Red Hat Display", serif;
+            font-weight: bold;
+            padding: 10px;
+        }
+
+        #acesso option:hover {
+            background-color: #7F08AF;
+            /* Efeito hover nas opções */
+            color: white;
+        }
+    </style>
     <title>Alterar Senha</title>
 </head>
 
@@ -14,126 +159,139 @@
             <h1>Alterar Senha</h1>
         </div>
         <div id="alterarSenhaForm">
-            <label for="login">Usuário:</label>
-            <input type="text" id="loginAlterar" placeholder="Digite o nome de usuário">
             <br><br>
-            <label for="senhaAntiga">Senha Atual:</label>
-            <input type="password" id="senhaAntiga" placeholder="Digite a senha atual">
+            <span class="txtlogin">Login</span>
+            <br>
+            <input type="text" id="loginAlterar" required><br>
             <br><br>
-            <label for="novaSenha">Nova Senha:</label>
-            <input type="password" id="novaSenha" placeholder="Digite a nova senha">
+            <span class="txtlogin">Senha Atual</span>
+            <br>
+            <input type="email" id="senhaAntiga" required><br>
             <br><br>
-            <button onclick="alterarSenha()">Alterar Senha</button>
+            <span class="txtlogin">Nova Senha</span>
+            <br>
+            <input type="password" id="novaSenha" required><br>
+            <br>
+            <div class="btnlogar" onclick="alterarSenha(event)">
+                <h2 class="textbtn">Alterar</h2>
+            </div>
+        </div>
+
+        <div class="form-container" id="cadastroFormContainer" style="display: none;">
+            <h1>Cadastro</h1>
+            <form id="cadastroForm">
+
+            </form>
         </div>
     </div>
 
     <script>
         const token = "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"; // Insira seu token de acesso pessoal do GitHub
-const repoOwner = "samukzxp"; // Seu nome de usuário no GitHub
-const repoName = "bdvz"; // Nome do repositório onde deseja salvar os dados
-const pathOwner = "dados/owner.json"; // Caminho do arquivo owner.json
-const path = "dados/usuarios.json"; // Caminho do arquivo JSON no repositório// Função para alterar a senha
-async function alterarSenha() {
-    const login = document.getElementById('loginAlterar').value.trim();
-    const senhaAntiga = document.getElementById('senhaAntiga').value.trim();
-    const novaSenha = document.getElementById('novaSenha').value.trim();
+        const repoOwner = "samukzxp"; // Seu nome de usuário no GitHub
+        const repoName = "bdvz"; // Nome do repositório onde deseja salvar os dados
+        const pathOwner = "dados/owner.json"; // Caminho do arquivo owner.json
+        const path = "dados/usuarios.json"; // Caminho do arquivo JSON no repositório// Função para alterar a senha
+        async function alterarSenha() {
+            const login = document.getElementById('loginAlterar').value.trim();
+            const senhaAntiga = document.getElementById('senhaAntiga').value.trim();
+            const novaSenha = document.getElementById('novaSenha').value.trim();
 
-    if (!login || !senhaAntiga || !novaSenha) {
-        alert("Por favor, preencha todos os campos.");
-        return;
-    }
-
-    const usuarios = await fetchUsuarios(); // Carregar usuários do GitHub
-
-    // Encontrar o usuário com o login fornecido
-    const usuario = usuarios.find(u => u.username?.trim() === login);
-
-    if (!usuario) {
-        alert("Usuário não encontrado.");
-        return;
-    }
-
-    if (usuario.password.trim() !== senhaAntiga) {
-        alert("Senha antiga incorreta.");
-        return;
-    }
-
-    // Atualiza a senha com a nova senha
-    usuario.password = novaSenha;
-
-    // Atualiza o arquivo JSON no GitHub com a nova senha
-    const sucesso = await atualizarUsuarios(usuarios);
-
-    if (sucesso) {
-        alert("Senha alterada com sucesso!");
-    } else {
-        alert("Erro ao atualizar a senha.");
-    }
-}
-
-// Função para atualizar os usuários no GitHub
-async function atualizarUsuarios(usuarios) {
-    const usuariosJson = JSON.stringify(usuarios);
-    const usuariosBase64 = btoa(usuariosJson); // Codifica em base64, como esperado pela API do GitHub
-
-    try {
-        const response = await fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/contents/${path}`, {
-            method: 'PUT',
-            headers: {
-                Authorization: `token ${token}`,
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                message: "Alterando senha do usuário",
-                content: usuariosBase64,
-                sha: await obterShaDoArquivo()  // Precisamos do SHA do arquivo para atualizá-lo
-            })
-        });
-
-        if (response.ok) {
-            return true;
-        } else {
-            console.error("Erro ao atualizar arquivo:", await response.json());
-            return false;
-        }
-    } catch (error) {
-        console.error("Erro ao atualizar arquivo:", error);
-        return false;
-    }
-}
-
-// Função para obter o SHA do arquivo
-async function obterShaDoArquivo() {
-    const response = await fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/contents/${path}`, {
-        headers: {
-            Authorization: `token ${token}`
-        }
-    });
-    
-    const data = await response.json();
-    return data.sha;
-}
-
-// Função para buscar os dados dos usuários no GitHub
-async function fetchUsuarios() {
-    try {
-        const response = await fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/contents/${path}`, {
-            headers: {
-                Authorization: `token ${token}`
+            if (!login || !senhaAntiga || !novaSenha) {
+                alert("Por favor, preencha todos os campos.");
+                return;
             }
-        });
 
-        const data = await response.json();
-        if (data && data.content) {
-            const usuariosJson = atob(data.content);  // Decodifica o conteúdo de Base64
-            return JSON.parse(usuariosJson);  // Retorna o conteúdo como um objeto JavaScript
+            const usuarios = await fetchUsuarios(); // Carregar usuários do GitHub
+
+            // Encontrar o usuário com o login fornecido
+            const usuario = usuarios.find(u => u.username?.trim() === login);
+
+            if (!usuario) {
+                alert("Usuário não encontrado.");
+                return;
+            }
+
+            if (usuario.password.trim() !== senhaAntiga) {
+                alert("Senha antiga incorreta.");
+                return;
+            }
+
+            // Atualiza a senha com a nova senha
+            usuario.password = novaSenha;
+
+            // Atualiza o arquivo JSON no GitHub com a nova senha
+            const sucesso = await atualizarUsuarios(usuarios);
+
+            if (sucesso) {
+                alert("Senha alterada com sucesso!");
+            } else {
+                alert("Erro ao atualizar a senha.");
+            }
         }
-        return [];
-    } catch (error) {
-        console.error("Erro ao buscar usuários:", error);
-        return [];
-    }
-}
+
+        // Função para atualizar os usuários no GitHub
+        async function atualizarUsuarios(usuarios) {
+            const usuariosJson = JSON.stringify(usuarios);
+            const usuariosBase64 = btoa(usuariosJson); // Codifica em base64, como esperado pela API do GitHub
+
+            try {
+                const response = await fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/contents/${path}`, {
+                    method: 'PUT',
+                    headers: {
+                        Authorization: `token ${token}`,
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        message: "Alterando senha do usuário",
+                        content: usuariosBase64,
+                        sha: await obterShaDoArquivo()  // Precisamos do SHA do arquivo para atualizá-lo
+                    })
+                });
+
+                if (response.ok) {
+                    return true;
+                } else {
+                    console.error("Erro ao atualizar arquivo:", await response.json());
+                    return false;
+                }
+            } catch (error) {
+                console.error("Erro ao atualizar arquivo:", error);
+                return false;
+            }
+        }
+
+        // Função para obter o SHA do arquivo
+        async function obterShaDoArquivo() {
+            const response = await fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/contents/${path}`, {
+                headers: {
+                    Authorization: `token ${token}`
+                }
+            });
+
+            const data = await response.json();
+            return data.sha;
+        }
+
+        // Função para buscar os dados dos usuários no GitHub
+        async function fetchUsuarios() {
+            try {
+                const response = await fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/contents/${path}`, {
+                    headers: {
+                        Authorization: `token ${token}`
+                    }
+                });
+
+                const data = await response.json();
+                if (data && data.content) {
+                    const usuariosJson = atob(data.content);  // Decodifica o conteúdo de Base64
+                    return JSON.parse(usuariosJson);  // Retorna o conteúdo como um objeto JavaScript
+                }
+                return [];
+            } catch (error) {
+                console.error("Erro ao buscar usuários:", error);
+                return [];
+            }
+        }
 
 
     </script>
