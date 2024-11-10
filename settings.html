@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style4.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Patua+One&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Patua+One&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+    </style>
+    <title>Administração | &copy; Vz Store</title>
+</head>
+
+<body>
+    <div class="acess">
+        <div class="form-container" id="loginForm">
+            <h1>Administração</h1>
+            <br><br>
+            <form id="loginFormElement">
+                <span class="txtlogin">Login</span>
+                <br>
+                <input type="text" id="adminUsername" required><br>
+                <br>
+                <br>
+                <span class="txtlogin">Senha</span>
+                <br>
+                <input type="password" id="adminPassword" required><br>
+                <div class="btnlogar" onclick="loginAdmin(event)">
+                    <h2 class="textbtn">Entrar</h2>
+                </div>
+            </form>
+        </div>
+
+        <div class="preciso" style="display: none;" id="banFormContainer">
+            <div class="center"><img src="imgs/r.jpg" alt=""></div>
+            <br><br>
+            <h1 style="margin-bottom: 20px;" id="bankickunkicktxt"></h1>
+            <div id="userList">
+                <!-- Lista de usuários será gerada aqui -->
+            </div>
+        </div>
+        
+        <div id="panelmanager" style="display: none;">
+            <span>Link do grupo:</span>
+            <input type="text" id="meuInput">
+            <div class="btnlogar" onclick="enviarParaGitHub(event)">
+                <span class="textlogar" style="margin: 0px;">Alterar</span>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="escolha escolhas" id="escolha" onclick="ban()">
+        <span class="nos">Ban</span>
+    </div>
+
+    <div class="escolha2 escolhas" id="escolha2" onclick="kickar()">
+        <span class="nos">Kick</span>
+    </div>
+
+    <div class="escolha3 escolhas" id="escolha3" onclick="unkick()">
+        <span class="nos">Unckick</span>
+    </div>
+
+    <div class="escolha4 escolhas" id="escolha5" onclick="openlinksm()">
+        <span class="nos">Links</span>
+    </div>
+
+    <div class="escolha5 escolhas" id="escolha4" onclick="voltar()">
+        <span class="nos">voltar</span>
+    </div>
+
+    <script src="js/banir.js"></script>
+    <script src="js/connect.js"></script>
+</body>
+
+</html>
