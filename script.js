@@ -8,7 +8,7 @@ window.open("https://www.instagram.com/vz_vendas._/", "_blank");
 }
 
 function grupo() {
-window.location.href = "teste";
+window.location.href = "file:///D:/sites/vz/settings.html";
 }
 
 function headtracking() {
